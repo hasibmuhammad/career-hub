@@ -4,8 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        secondary: "#474747",
+        grayish1: "#757575",
+        grayish2: "#A3A3A3",
         start: "#7E90FE",
         end: "#9873FF",
+        catBgStart: "rgba(126, 144, 254, 0.05)",
+        catBgEnd: "rgba(152, 115, 255, 0.05)",
+        catImgStart: "rgba(126, 144, 254, 0.1)",
+        catImgEnd: "rgba(152, 115, 255, 0.1)",
       },
     },
   },
