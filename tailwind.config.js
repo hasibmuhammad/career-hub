@@ -8,6 +8,7 @@ export default {
         bg2: "url(/assets/images/bg2.png)",
       },
       colors: {
+        imgbg: "#F4F4F4",
         border: "#E8E8E8",
         secondary: "#474747",
         grayish1: "#757575",

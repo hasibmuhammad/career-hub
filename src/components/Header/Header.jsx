@@ -3,11 +3,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const Header = () => {
   const { pathname } = useLocation();
 
-  console.log(pathname.includes("/job/"));
-
-  const navBg = pathname.includes("/job/")
-    ? "bg-gradient-to-r from-catBgStart to-catBgEnd w-full pt-10"
-    : "mt-10";
+  const navBg =
+    pathname.includes("/job/") || pathname.includes("/applied")
+      ? "bg-gradient-to-r from-catBgStart to-catBgEnd w-full pt-10"
+      : "mt-10";
 
   return (
     <div className={`${navBg} px-10`}>
