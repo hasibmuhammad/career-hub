@@ -1,9 +1,21 @@
 import { CiLocationOn, CiDollar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { getAppliedJobs } from "../../utils/utils";
+import { useEffect, useState } from "react";
 
 const AppliedJobs = () => {
   const jobs = getAppliedJobs();
+  const [filter, setFilter] = useState("");
+  const [filterJobs, setFilterJobs] = useState(jobs);
+
+  useEffect(() => {
+    filter === "all" && setFilterJobs(jobs);
+    filter === "onsite" &&
+      setFilterJobs(jobs.filter((j) => j.remote_or_onsite === "Onsite"));
+    filter === "remote" &&
+      setFilterJobs(jobs.filter((jb) => jb.remote_or_onsite === "Remote"));
+  }, [filter]);
+
   return (
     <div className="relative bg-bg1 bg-no-repeat">
       <div className="bg-bg2 bg-no-repeat absolute h-full w-full bg-right-top -top-24 -z-50"></div>
@@ -11,9 +23,12 @@ const AppliedJobs = () => {
         <h2 className="text-3xl font-extrabold">Applied Jobs</h2>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-32">
+      <div className="max-w-7xl mx-auto mt-32 px-10 xl:px-0">
         <div className="text-right">
-          <select className="px-3 py-2 bg-imgbg rounded-lg outline-none">
+          <select
+            className="px-3 py-2 bg-imgbg rounded-lg outline-none"
+            onChange={(e) => setFilter(e.target.value)}
+          >
             <option value="">Filter By</option>
             <option value="all">All</option>
             <option value="remote">Remote</option>
@@ -21,8 +36,8 @@ const AppliedJobs = () => {
           </select>
         </div>
         <div className="grid grid-cols-1 gap-8 mt-10">
-          {jobs.length > 0 &&
-            jobs.map((job) => (
+          {filterJobs.length > 0 &&
+            filterJobs.map((job) => (
               <div
                 key={job.id}
                 className="border border-border rounded-lg p-10 flex items-center justify-between"
