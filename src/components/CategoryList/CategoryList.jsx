@@ -19,7 +19,7 @@ const CategoryList = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 rounded-lg mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 rounded-lg mt-8">
         {categories.map((category) => (
           <div
             key={category.id}

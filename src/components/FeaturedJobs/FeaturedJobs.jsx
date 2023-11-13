@@ -24,7 +24,7 @@ const FeaturedJobs = () => {
           need. Its your future
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-8 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
         {filteredJobs.map((job) => (
           <div key={job.id} className="border border-border rounded-lg p-10">
             <img className="mb-5" src={job.logo} alt={job.job_title} />
