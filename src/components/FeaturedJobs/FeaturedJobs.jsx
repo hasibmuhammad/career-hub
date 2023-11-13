@@ -1,5 +1,6 @@
 import { CiLocationOn, CiDollar } from "react-icons/ci";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedJobs = () => {
   const [seeAll, setSeeAll] = useState(false);
@@ -56,9 +57,11 @@ const FeaturedJobs = () => {
               </div>
             </div>
             <div className="mt-4">
-              <button className="bg-gradient-to-r from-start to-end px-7 py-3 rounded-lg font-extrabold text-white">
-                View Details
-              </button>
+              <Link to={`/job/${job.id}`}>
+                <button className="bg-gradient-to-r from-start to-end px-7 py-3 rounded-lg font-extrabold text-white">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         ))}

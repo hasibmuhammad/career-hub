@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        bg1: "url(/assets/images/bg1.png)",
+        bg2: "url(/assets/images/bg2.png)",
+      },
       colors: {
         border: "#E8E8E8",
         secondary: "#474747",

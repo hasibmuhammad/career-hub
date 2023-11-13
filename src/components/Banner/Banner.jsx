@@ -21,7 +21,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="w-full">
-        <img className="w-full" src="../../../assets/images/user.png" alt="" />
+        <img className="w-full" src="../../../assets/images/user.png" />
       </div>
     </div>
   );
