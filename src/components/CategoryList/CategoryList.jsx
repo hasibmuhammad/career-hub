@@ -10,7 +10,7 @@ const CategoryList = () => {
   }, []);
 
   return (
-    <div className="mt-20">
+    <div className="mt-20 px-10 xl:px-0">
       <div className="flex flex-col justify-center items-center">
         <h1 className="font-extrabold text-5xl">Job Category List</h1>
         <p className="mt-4">

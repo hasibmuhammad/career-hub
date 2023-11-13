@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center px-10 lg:px-0">
+    <div className="flex flex-col px-10 xl:px-0 md:flex-row items-center justify-center gap-10">
       <div>
         <h1 className="font-bold text-5xl leading-tight">
           One Step <br />
@@ -20,9 +20,9 @@ const Banner = () => {
           </button>
         </div>
       </div>
-      <div className="w-full">
-        <img className="w-full" src="../../../assets/images/user.png" />
-      </div>
+      <img className="w-1/2" src="../../../assets/images/user.png" />
+      {/* <div className="w-3/4">
+      </div> */}
     </div>
   );
 };
