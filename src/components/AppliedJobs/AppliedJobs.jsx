@@ -40,9 +40,9 @@ const AppliedJobs = () => {
             filterJobs.map((job) => (
               <div
                 key={job.id}
-                className="border border-border rounded-lg p-10 flex items-center justify-between"
+                className="border border-border rounded-lg p-10 flex flex-col md:flex-row md:items-center justify-between"
               >
-                <div className="flex items-center gap-8">
+                <div className="flex flex-col md:flex-row md:items-center md:gap-8 space-y-2 md:space-y-0">
                   <img
                     className="bg-imgbg py-24 px-12 w-52"
                     src={job.logo}
@@ -63,7 +63,7 @@ const AppliedJobs = () => {
                         {job.job_type}
                       </button>
                     </div>
-                    <div className="flex items-center gap-8 mt-4">
+                    <div className="flex flex-col md:flex-row md:items-center md:gap-8 mt-4">
                       <div className="flex items-center gap-1">
                         <CiLocationOn className="text-2xl"></CiLocationOn>
                         <p className="text-grayish1 font-medium text-lg">
@@ -79,7 +79,7 @@ const AppliedJobs = () => {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div className="mt-4 md:mt-0">
                   <Link to={`/job/${job.id}`}>
                     <button className="bg-gradient-to-r from-start to-end px-7 py-3 rounded-lg font-extrabold text-white">
                       View Details
