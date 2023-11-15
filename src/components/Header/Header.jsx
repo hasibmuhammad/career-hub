@@ -14,7 +14,7 @@ const Header = () => {
         className={`max-w-7xl mx-auto flex flex-col gap-8 md:gap-4 md:flex-row justify-between items-center `}
       >
         <Link>
-          <img src="../../../assets/logo/CareerHub.png" />
+          <h1 className="font-bold text-3xl">jobnest.</h1>
         </Link>
         <div className="flex items-center gap-8">
           <NavLink to={"/"}>Home</NavLink>

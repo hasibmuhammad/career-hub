@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const AppliedJobs = () => {
   const jobs = getAppliedJobs();
+
   const [filter, setFilter] = useState("");
   const [filterJobs, setFilterJobs] = useState(jobs);
 
